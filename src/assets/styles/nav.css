@@ -1,0 +1,25 @@
+.nav-container {
+    
+}
+
+.nav-container ul {
+    display: flex;
+}
+
+.nav-container ul li {
+    list-style: none;
+    margin: 0 1.5em;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-container ul li:hover {
+    cursor: pointer;
+    color:rgb(61, 61, 61);
+    transition: 0.1s color ease;
+}

@@ -1,0 +1,44 @@
+.reservation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation-container h2 {
+    font-size: 2em;
+    margin: 1.2em 0;
+}
+
+.reservation-container form {
+    min-width: 35%;
+}
+
+.reservation-container form .form-item {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-container form .form-item label {
+    margin-bottom: 0.4em;
+}
+
+.reservation-container form .form-item input, 
+.reservation-container form .form-item select {
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.reservation-container form .form-item input {
+    height: 28px;
+}
+
+.reservation-container form .form-item select {
+    height: 36px;
+}
+
+.reservation-container form .form-item button {
+    font-size: 0.7em;
+}

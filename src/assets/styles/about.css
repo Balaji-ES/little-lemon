@@ -1,0 +1,30 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5em;
+}
+
+.about-container > div:first-child {
+    max-width: 35em;
+}
+
+.about-container > div:first-child h2 {
+    font-size: 3.7em;
+    font-weight: 600;
+    font-family: "Markazi Text", serif;
+}
+
+.about-container > div:first-child p {
+    font-size: 1.1em;
+    margin: 1.3em 0;
+    color: rgb(73, 94, 87);
+    font-weight: 400;
+}
+
+.about-container img {
+    width: 20em;
+    height: 23em;
+    object-fit: cover;
+    border-radius: 1em;
+}

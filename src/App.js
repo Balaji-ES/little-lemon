@@ -1,16 +1,19 @@
+import { BrowserRouter } from 'react-router-dom';
+import Container from './components/Container';
 import Header from './components/Header';
-import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import './App.css';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Nav/>
-      <Main/>
-      <Footer/>
+      <BrowserRouter>
+        <Container>
+          <Header/>
+          <Main/>
+          <Footer/>
+        </Container>
+      </BrowserRouter>
     </>
   );
 }

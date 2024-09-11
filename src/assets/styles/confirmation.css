@@ -1,0 +1,45 @@
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.confirmation-container h2 {
+    margin-bottom: 1.2em;
+    font-size: 1.7em;
+}
+
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.confirmation-container .reservation-data {
+    background-color: rgb(73, 94, 87);
+    color: whitesmoke;
+    border-radius: 0.6em;
+    padding: 1.2em;
+    font-size: 1.2em;
+    min-width: 35%;
+}
+
+.confirmation-container .reservation-data .content-item {
+    margin: 1.2em 0;
+}
+
+.confirmation-container .reservation-data .content-item span:first-child {
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.confirmation-container button {
+    margin-top: 3em;
+}
+
+.confirmation-container button a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,25 @@
+.menu-container {
+    margin-top: 3.2em ;
+}
+
+.menu-container > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.menu-container > div:first-child h2 {
+    font-size: 4em;
+    font-weight: 500;
+    font-family: "Markazi Text", serif;
+}
+
+.menu-container > div.three-col {
+    display: flex;
+    gap: 6em;
+}
+
+.menu-container > div.three-col > div {
+    flex-basis: calc(100% / 3);
+}

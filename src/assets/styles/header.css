@@ -1,0 +1,19 @@
+.header-container {
+    background-color: #FFFFFF;
+    padding: 1.4em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: fixed;
+    top: 0;
+    width: 70%;
+    height: fit-content;
+    transition: 0.4s ease top;
+}
+
+.header-container img {
+    height: 50px;
+    width: auto;
+    margin-right: 2em;
+}
