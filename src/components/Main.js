@@ -10,14 +10,14 @@ const Main = () => {
 
     const navigate = useNavigate();
 
+    const [ availableTimes, dispatchAvailableTimes ] = useReducer(updateTimes, null, initializeTimes);
+
     const [ reservationData, setReservationData ] = useState({
         "booking-date": getCurrentFormattedDate(),
-        "booking-time": "17:00",
+        "booking-time": availableTimes[0],
         "no-of-guests": 1,
         "occasion": "Birthday"
     });
-
-    const [ availableTimes, dispathAvailableTimes ] = useReducer(updateTimes, null, initializeTimes);
 
     const handleReservationDataChange = (e) => {
       setReservationData({
@@ -29,6 +29,7 @@ const Main = () => {
     const submitForm = (formData) => {
       const res = submitAPI(formData);
       if(res === true) {
+        localStorage.setItem("Booking", JSON.stringify(reservationData));
         navigate('/confirmation');
         return true;
       } else {
@@ -41,8 +42,8 @@ const Main = () => {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/about' element={<About />} />
-            <Route path='/booking' element={<BookingForm reservationData={reservationData} handleReservationDataChange={handleReservationDataChange} availableTimes={availableTimes} dispathAvailableTimes={dispathAvailableTimes} submitForm={submitForm} />} />
-            <Route path='/confirmation' element={<ConfirmedBooking reservationData={reservationData} />} />
+            <Route path='/booking' element={<BookingForm reservationData={reservationData} handleReservationDataChange={handleReservationDataChange} availableTimes={availableTimes} dispatchAvailableTimes={dispatchAvailableTimes} submitForm={submitForm} />} />
+            <Route path='/confirmation' element={<ConfirmedBooking />} />
           </Routes>
       </main>
   );

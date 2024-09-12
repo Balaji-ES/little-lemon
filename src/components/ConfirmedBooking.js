@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/confirmation.css';
 
-const ConfirmedBooking = ({reservationData}) => {
-  return (
+const ConfirmedBooking = () => {
+
+    const [ reservationData, setReservationData ] = useState({});
+
+    useEffect(() => {
+        const bookingJSON = JSON.parse(localStorage.getItem("Booking"));
+        if(bookingJSON) {
+            setReservationData(bookingJSON);
+        }
+    }, []);
+
+    return (
     <div className='confirmation-container'>
         <h2>Booking successful !</h2>
         <div className='reservation-data'>
@@ -30,7 +40,7 @@ const ConfirmedBooking = ({reservationData}) => {
         </div>
         <button className='standard-btn'><Link to='/'>Back home</Link></button>
     </div>
-  )
+    )
 }
 
 export default ConfirmedBooking;
